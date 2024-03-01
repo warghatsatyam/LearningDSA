@@ -32,7 +32,15 @@ class Map:
         self.count+=1
 
 
-
+    def search(self,key):
+        hc = hash(key)
+        index = self.getBucketIndex(hc)
+        head = self.buckets[index]
+        while head is not None:
+            if head.key == key:
+                return head.value
+            head=head.next
+        return None
 if __name__ == '__main__':
     m = Map()
     m.insert('Satyam',2)
