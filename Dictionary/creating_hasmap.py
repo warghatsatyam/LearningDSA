@@ -41,6 +41,24 @@ class Map:
                 return head.value
             head=head.next
         return None
+    
+    def remove(self,key):
+        hc = hash(key)
+        index = self.getBucketIndex(hc)
+        head = self.buckets[index]
+        prev = None 
+        while head is not None:
+            if head.key == key:
+                self.count-=1
+                if prev is None:
+                    self.buckets[index] = head.next
+                else:
+                    prev.next = head.next 
+                return head.value 
+            prev = head 
+            head = head.next
+        return None 
+    
 if __name__ == '__main__':
     m = Map()
     m.insert('Satyam',2)
@@ -48,4 +66,8 @@ if __name__ == '__main__':
     m.insert('Luffy',6)
     print(m.count)
     m.insert('Satyam',6)
+    print(m.count)
+    m.remove('Satyam')
+    print(m.count)
+    m.remove('He')
     print(m.count)
