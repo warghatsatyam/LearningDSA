@@ -19,12 +19,24 @@ class PriorityQueue:
             return None
         return self.pq[0].value
     
+    def __percolateUp(self):
+        childIndex = self.getSize()-1
+        while childIndex > 0:
+            parentIndex = (childIndex-1)//2
+            if self.pq[childIndex].priority < self.pq[parentIndex].priority:
+                self.pq[childIndex],self.pq[parentIndex]=self.pq[parentIndex],self.pq[childIndex]
+                childIndex=parentIndex
+            else:
+                break
+
     def insert(self,value,priority):
-        pass 
+        pq_node = PriorityQueueNode(value,priority)
+        self.pq.append(pq_node)
+        self.__percolateUp()
 
     def removeMin(self):
-        pass 
+        
 
-    
+
 
     
