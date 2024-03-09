@@ -8,7 +8,6 @@ def percolateUp(arr):
             childIndex=parentIndex
         else:
             break
-    
 
 def create_heap(arr):
     min_heap = []
@@ -17,8 +16,8 @@ def create_heap(arr):
         percolateUp(min_heap)
     return min_heap
 
-
 if __name__ == '__main__':
     arr = [10,5,8,1,4]
     min_heap = create_heap(arr)
     print(min_heap)
+
