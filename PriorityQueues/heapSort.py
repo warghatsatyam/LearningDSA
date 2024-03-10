@@ -3,7 +3,7 @@ def percolateDown(arr,i,n):
     lci=2*pi+1
     rci = 2*pi+2
     while lci < n:
-        miniIndex = pi 
+        miniIndex = pi
         if arr[miniIndex]>arr[lci]:
             miniIndex=lci 
         if rci < n and arr[miniIndex]>arr[rci]:
@@ -29,3 +29,4 @@ arr = [int(ele) for ele in input().split()]
 heapsort(arr)
 for x in arr:
     print(x, end=' ')
+
