@@ -12,10 +12,6 @@ def fib(n,dp):
     else:
         ans2 = dp[n-2]
     return ans1+ans2
-
-
-
-
 if __name__ == '__main__':
     n=int(input())
     dp=[-1 for i in range(n+1)]
