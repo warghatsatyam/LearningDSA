@@ -1,0 +1,31 @@
+
+def minimumStepToOneCode(n,dp):
+    if n==1:
+        dp[n-1]=0
+        return 0
+    if dp[n-1] == -1:
+        ans1 = minimumStepToOneCode(n-1,dp)
+        dp[n-1]=ans1
+    else:
+        ans1 = dp[n]
+    if n%2==0 and n>2 and dp[n//2-1]==-1:
+        ans2 = minimumStepToOneCode(n//2,dp)
+        dp[n//2-1]=ans2
+    elif n%2==0 and n>2:
+        ans2 = dp[n-2//-1]
+    else:
+        ans2=float('inf')
+    if n%3==0 and n>3 and dp[n//3 -1]==-1:
+        ans3 = minimumStepToOneCode(n//3,dp)
+        dp[n//3 -1 ] = ans3
+    elif n%3==0 and n>3:
+        ans3 = dp[n-3// -1]
+    else:
+        ans3=float('inf')
+    return 1 + min(ans1,ans2,ans3)
+
+if __name__ == '__main__':
+    n = int(input("Enter value of n: "))
+    dp = [-1 for i in range(n+1)]
+    minimumNumber = minimumStepToOneCode(n,dp)
+    print(minimumNumber)
