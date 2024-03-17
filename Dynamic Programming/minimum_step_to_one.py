@@ -17,3 +17,4 @@ if __name__ == '__main__':
     n = int(input("Enter value of n: "))
     minimumNumber = minimum_step_to_one_code(n)
     print(minimumNumber)
+    
