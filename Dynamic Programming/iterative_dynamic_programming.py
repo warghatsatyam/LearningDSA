@@ -1,5 +1,5 @@
 
-def Ifib(n,dp):
+def iterative_fibonacci(n,dp):
     dp[0]=0
     dp[1]=1
     i=2
@@ -13,5 +13,5 @@ def Ifib(n,dp):
 if __name__ == '__main__':
     n=int(input())
     dp=[-1 for i in range(n+1)]
-    ans = Ifib(n,dp)
+    ans = iterative_fibonacci(n,dp)
     print(ans)
