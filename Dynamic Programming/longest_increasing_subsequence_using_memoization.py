@@ -9,13 +9,13 @@ def lis(li,i,n,dp):
                 further_including_max = lis(li,j,n,dp)[0]+1
                 dp[j]=further_including_max
             else:
-                further_including_max = dp[j]
+                further_including_max = dp[j][0]
             including_max = max(including_max,further_including_max)
     if dp[i+1]==-1:
         excluding_max = lis(li,i+1,n,dp)[1]
         dp[i+1] = excluding_max
     else:
-        excluding_max = dp[i+1]
+        excluding_max = dp[i+1][1]
     overall_max = max(including_max,excluding_max)
     print(dp)
     return including_max,overall_max
