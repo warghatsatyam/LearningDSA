@@ -26,7 +26,7 @@ class Graph:
         if queue.empty():
             return
         ele = queue.get()
-        print(ele)
+        print(ele,end=" ")
         visited_nodes[ele] = True
         for i in range(self.nVertices):
             if self.adjacencyMatrix[ele][i] == 1 and visited_nodes[i] == False:
@@ -40,7 +40,7 @@ class Graph:
         vertex_queue.put(sv)
         visited_nodes = [False for i in range(self.nVertices)]
         self.__bfs_helper(visited_nodes,vertex_queue)
-
+    
 
     def removeEdge(self,v1,v2):
         if self.adjacencyMatrix[v1][v2] == 0:
