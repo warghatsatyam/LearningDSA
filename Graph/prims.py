@@ -69,7 +69,7 @@ class Graph:
         for i in range(self.nVertices - 1):
             min_vertex = self.get_minVertex(visited,weight)
             visited[min_vertex] = True
-
+            
             for j in range(self.nVertices):
                 if self.adjacencyMatrix[min_vertex][j] > 0 and visited[j] == False:
                     if (weight[j] > self.adjacencyMatrix[min_vertex][j]):
