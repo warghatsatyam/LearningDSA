@@ -14,9 +14,6 @@ def get_intersection_of_arr(arr1,arr2):
     return intersection_of_arr
 
 
-
-
-
 if __name__ == '__main__':
     arr1 = [2,6,8,5,4,3,8]
     arr2 = [2,3,4,7,8,8]
