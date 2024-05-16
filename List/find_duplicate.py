@@ -11,10 +11,6 @@ def get_duplicatet(arr):
             return x
     return -1
 
-
-
-
-
 if __name__ == '__main__':
     arr = [0,7,2,6,4,7,1,3,6]
     unique_ele = get_duplicatet(arr)

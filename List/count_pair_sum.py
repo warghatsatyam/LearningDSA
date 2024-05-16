@@ -1,5 +1,5 @@
 
-def pairSum(arr,n,sum) :
+def pairSum(arr,sum) :
     count = 0
     hashmap = {}
     for x in arr:
@@ -22,5 +22,5 @@ def pairSum(arr,n,sum) :
 if __name__ == '__main__':
     arr = [0,4,1,2,5,4]
     sum = 5
-    count = get_count_pair_sum(arr,sum)
+    count = pairSum(arr,sum)
     print(count)
