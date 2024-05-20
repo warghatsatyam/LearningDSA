@@ -10,8 +10,6 @@ def insertion_sort_code(arr,n):
     return arr
 
 
-
-
 if __name__ == '__main__':
     arr = [-2,45,0,1,-3,7]
     n = len(arr)
