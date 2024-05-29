@@ -33,6 +33,6 @@ def merge_sort(arr):
     return merge(left_sorted_arr,right_sorted_arr)
 
 if __name__ == '__main__':
-    arr = [2,3,4,0,1,6]
+    arr = [2,13,4,1,3,6,28]
     output = merge_sort(arr)
     print(output)
