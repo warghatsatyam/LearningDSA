@@ -39,8 +39,11 @@ def delete_node_at_ith_index_code(head,index):
         return None 
 
     #Deleting element at ith index
-    prev.next = curr.next 
-    curr.next = None 
+
+    # here I had missed an edge case when there is only one element and I am asked to delete node at 1 index 
+    if curr is not None:
+        prev.next = curr.next 
+        curr.next = None 
     return head 
 
 
