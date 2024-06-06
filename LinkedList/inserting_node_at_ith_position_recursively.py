@@ -7,6 +7,8 @@ class Node:
 
 
 def inserting_node_at_ith_position_recursively_code(head,data,i):
+    if i < 0:
+        return None
     if head is None:
         return None 
     if i == 0:
