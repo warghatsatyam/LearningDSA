@@ -22,6 +22,6 @@ if __name__  == '__main__':
     data = int(input())
     node_position = get_index_of_node_code(head, data)
     if node_position!=-1:
-        print(f"The node  {data} is present at {node_position}")
+        print(f"The node  {data} is present at index {node_position}")
     else:
         print(f"The node {data} is not present")
