@@ -22,8 +22,9 @@ def optimized_input_taking_ll(arr):
 def traversal_ll(head):
     curr = head 
     while curr is not None:
-        print(curr.data)
+        print(curr.data , end=" ")
         curr = curr.next
+    print()
     
 
 if __name__ == '__main__':
