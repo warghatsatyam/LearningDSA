@@ -33,3 +33,16 @@ if __name__ == '__main__':
     n = int(input())
     head = optimized_insertin_n_node_to_first_code(head,n)
     traversal_ll(head)
+
+
+""" 
+say length is 5 and n = 3
+and I am using fast and slow pointer technique
+so  first I will move fast 3 step ahed while slow stays at start 
+Now fast has only 2 step to go
+So now I will start moving fast one step and slow one step until fast reaches end
+
+Because only 2 step left for fast slow reaches 2 step ahead and effectively we can break the list here
+
+This is the crux of the fast and slow pointe technique in this problem
+"""
