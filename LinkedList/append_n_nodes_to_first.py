@@ -1,11 +1,16 @@
-from length_of_ll_recursive import recursive_linked_list_length
 from optimized_input_taking_of_linkedlist import optimized_input_taking_ll,traversal_ll
-
+from length_of_ll_iteratively import length_of_linkedlist_iteratively
 
 def append_n_nodes_to_first_code(head,n):
-    length_of_linked_list = recursive_linked_list_length(head)
+    length_of_linked_list = length_of_linkedlist_iteratively(head)
     new_length = length_of_linked_list-n
 
+    if head is None or n<=0:
+        return head
+    
+    if new_length <=0:
+        return head
+    
     count = 0
     curr  = head 
     while count<new_length-1:
