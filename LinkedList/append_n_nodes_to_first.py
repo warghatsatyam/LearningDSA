@@ -4,23 +4,22 @@ from optimized_input_taking_of_linkedlist import optimized_input_taking_ll,trave
 
 def append_n_nodes_to_first_code(head,n):
     length_of_linked_list = recursive_linked_list_length(head)
-    new_length = n-length_of_linked_list
+    new_length = length_of_linked_list-n
 
     count = 0
     curr  = head 
-    while count<new_length:
+    while count<new_length-1:
         count+=1
-        print(count)
-        curr = curr.next 
+        curr = curr.next
     new_head = curr.next 
 
     # This will break the node in two part 1 to n-1 and  n to N
     curr.next = None 
 
-    curr = new_head
-    while curr.next is not None:
-        curr = curr.next 
-    curr.next = new_head
+    curr1 = new_head
+    while curr1.next is not None:
+        curr1 = curr1.next 
+    curr1.next = head
     return new_head
 
 
