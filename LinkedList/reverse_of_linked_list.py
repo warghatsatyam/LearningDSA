@@ -2,15 +2,16 @@
 from optimized_input_taking_of_linkedlist import optimized_input_taking_ll,traversal_ll
 
 def generate_reverse_linked_list(head):
-    if head is None:
-        return head 
-    
-    if head.next is None:
-        return head 
-    
-    reverse_head = generate_reverse_linked_list(head.next)
-    reverse_head.next = head 
-    return reverse_head
+    prev = None
+    current = head 
+
+    while current is not None:
+        next_node = current.next 
+        current.next = prev 
+        prev = current
+        current = next_node
+
+    return prev
     
 
 if __name__ == '__main__':
