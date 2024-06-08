@@ -11,7 +11,7 @@ def recursive_reverse_linked_list(head):
     while curr.next is not None:
         curr = curr.next 
 
-    curr.next = head 
+    curr.next = head  
     head.next = None 
     return new_head
 
