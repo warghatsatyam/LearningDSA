@@ -12,11 +12,11 @@ def midpoint_of_linked_list_code(head):
         fast = fast.next.next 
         slow = slow.next 
 
-    return slow.data
+    return slow
 
 
 if __name__ == '__main__':
     arr = [int(x) for x in input().split()]
     head = optimized_input_taking_ll(arr)
     mid_point = midpoint_of_linked_list_code(head)
-    print(mid_point)
+    print(mid_point.data)
