@@ -41,3 +41,16 @@ class Stack:
     
 
 
+s = Stack()
+s.push(10)
+s.push(11)
+s.push(12)
+s.push(13)
+s.push(14)
+print(s.size_of_stack())
+print(s.top())
+print(s.isEmpty())
+print(s.pop())
+print(s.pop())
+print(s.pop())
+print(s.size_of_stack())
