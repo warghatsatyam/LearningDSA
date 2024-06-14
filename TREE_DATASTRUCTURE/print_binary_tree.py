@@ -5,17 +5,17 @@ def print_tree(root):
     if root is None:
         return -1 
     if root.left is not None and root.right is not None:
-        print(f"{root.data}:{root.left.data},{root.right.data}")
+        print(f"{root.data}:->L:{root.left.data},R:{root.right.data}")
         print_tree(root.left)
         print_tree(root.right)
     elif root.left is not None and root.right is None:
-        print(f"{root.data}:{root.left.data},{-1}")
+        print(f"{root.data}:->L:{root.left.data},R:{-1}")
         print_tree(root.left)
     elif root.left is None and root.right is not None:
-        print(f"{root.data}:{-1},{root.right.data}")
+        print(f"{root.data}:->L:{-1},R:{root.right.data}")
         print_tree(root.right)
     else:
-        print(f"{root.data}:{-1},{-1}")
+        print(f"{root.data}:->L:{-1},R:{-1}")
 
 
 
