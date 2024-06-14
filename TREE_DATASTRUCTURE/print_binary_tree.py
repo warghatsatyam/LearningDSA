@@ -3,7 +3,7 @@ from create_binary_tree_node import BinaryTree
 
 def print_tree(root):
     if root is None:
-        return
+        return -1
     
     left_data = root.left.data if root.left else -1
     right_data = root.right.data if root.right else -1 
