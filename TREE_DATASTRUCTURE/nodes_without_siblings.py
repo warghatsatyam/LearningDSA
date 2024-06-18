@@ -16,7 +16,7 @@ def nodes_without_siblings(root):
         print(root.right.data, end=" ")
     if root.right is None and root.left is not None:
         print(root.left.data, end=" ")
-    
+                                    
     nodes_without_siblings(root.left)
     nodes_without_siblings(root.right)
 
